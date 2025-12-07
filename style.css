@@ -1,0 +1,12 @@
+/*
+Theme Name: CMS Labb 1
+Description: Ett anpassat WordPress-tema skapat från statisk HTML-struktur för CMS-utveckling kursen. Temaet inkluderar alla nödvändiga sidmallar, widget-områden och dynamisk innehållshantering.
+Author: Arif
+Version: 1.0
+Text Domain: cms-labb1
+*/
+
+/*
+ * Styles are enqueued via functions.php
+ * This file only contains the theme header information required by WordPress
+ */

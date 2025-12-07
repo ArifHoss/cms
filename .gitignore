@@ -1,0 +1,92 @@
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/cache/
+wp-content/upgrade/
+
+# WordPress core (if present)
+wp-admin/
+wp-includes/
+wp-*.php
+xmlrpc.php
+readme.html
+license.txt
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Build and dist directories
+dist/
+build/
+*.min.js
+*.min.css
+
+# Environment and config files
+.env
+.env.local
+.env.*.local
+config.local.php
+wp-config-local.php
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+error_log
+debug.log
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+tmp/
+temp/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Composer
+vendor/
+composer.lock
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Database dumps
+*.sql
+*.sql.gz
+
+# Docker
+docker-compose.override.yml
+.docker/
