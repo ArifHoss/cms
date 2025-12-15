@@ -473,6 +473,47 @@ article .meta {
 			margin-top: 10px;
 		}
 
+/* Alert styles
+------------------------------------------------------------------ */
+
+.alert {
+	padding: 15px 20px;
+	margin-bottom: 20px;
+	border-radius: 4px;
+}
+
+.alert-success {
+	background-color: #d4edda;
+	border: 1px solid #c3e6cb;
+	color: #155724;
+}
+
+.alert-danger {
+	background-color: #f8d7da;
+	border: 1px solid #f5c6cb;
+	color: #721c24;
+}
+
+/* Button styles
+------------------------------------------------------------------ */
+
+.button {
+	background-color: crimson;
+	border: none;
+	color: white;
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+}
+
+.button:hover,
+.button:active {
+	background-color: darkred;
+	color: white;
+	text-decoration: none;
+}
+
 /* Footer styles
 ------------------------------------------------------------------ */
 

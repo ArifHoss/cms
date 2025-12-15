@@ -6,10 +6,10 @@ Ett anpassat WordPress-tema skapat från statisk HTML-struktur för CMS-utveckli
 
 1. Kopiera hela temamappen till `wp-content/themes/` i din WordPress-installation
 2. Kopiera även CSS, JS, bilder och fonter från den statiska webbplatsen:
-   - `css/` → `wp-content/themes/cms/css/`
-   - `js/` → `wp-content/themes/cms/js/`
-   - `img/` → `wp-content/themes/cms/img/`
-   - `fonts/` → `wp-content/themes/cms/fonts/`
+    - `css/` → `wp-content/themes/cms/css/`
+    - `js/` → `wp-content/themes/cms/js/`
+    - `img/` → `wp-content/themes/cms/img/`
+    - `fonts/` → `wp-content/themes/cms/fonts/`
 3. Aktivera temat i WordPress Admin → Utseende → Teman
 
 ## Funktioner
@@ -26,26 +26,37 @@ Temat inkluderar följande sidmallar som kan väljas när du skapar en ny sida:
 
 ### Template Filer
 
-- `front-page.php` - Startsida med hero-bild och välkomsttext
-- `home.php` - Blogg/nyhetssida som listar alla inlägg
-- `single.php` - Enskild bloggpost/nyhetsinlägg
-- `archive.php` - Arkiv-sida som listar alla inlägg för en vald datumperiod
-- `category.php` - Kategorisida som listar alla inlägg inom vald kategori
-- `author.php` - Författarsida som listar alla inlägg av en specifik författare
-- `search.php` - Sida som visar sökresultatet efter en sökning
-- `404.php` - 404-sida som visas om användaren hamnar fel
+-   `front-page.php` - Startsida med hero-bild och välkomsttext
+-   `home.php` - Blogg/nyhetssida som listar alla inlägg
+-   `single.php` - Enskild bloggpost/nyhetsinlägg
+-   `archive.php` - Arkiv-sida som listar alla inlägg för en vald datumperiod
+-   `category.php` - Kategorisida som listar alla inlägg inom vald kategori
+-   `author.php` - Författarsida som listar alla inlägg av en specifik författare
+-   `search.php` - Sida som visar sökresultatet efter en sökning
+-   `404.php` - 404-sida som visas om användaren hamnar fel
 
 ### Widget-områden
 
 Temat har två widget-områden:
-- **Sidebar** - Huvudsidobar (visas på bloggsidor)
-- **Footer Widget Area** - Widget-område för sidfot
+
+-   **Sidebar** - Huvudsidobar (visas på bloggsidor)
+-   **Footer Widget Area** - Widget-område för sidfot
 
 ### Anpassad Widget
 
 Temat inkluderar en anpassad widget: **Senaste inlägg med bild** som visar de senaste inläggen med utvald bild.
 
 ## Setup-instruktioner
+
+### 0. Skapa Theme Screenshot (VIKTIGT!)
+
+WordPress kräver en `screenshot.png` fil för att visa temat i admin-gränssnittet.
+
+1. Ta en skärmdump av din webbplats
+2. Anpassa storleken till **880x660 pixlar** (rekommenderad storlek)
+3. Spara som `screenshot.png` i tema-mappen (`cms/screenshot.png`)
+
+**Tips:** Du kan använda verktyg som GIMP, Photoshop, eller online-verktyg för att skapa bilden.
 
 ### 1. Skapa Meny
 
@@ -57,13 +68,14 @@ Temat inkluderar en anpassad widget: **Senaste inlägg med bild** som visar de s
 ### 2. Skapa Sidor
 
 Skapa följande sidor:
-- **Startsida** - Välj "Startsida" som sidmall (eller använd `front-page.php`)
-- **Blogg** - Använd standardmall eller `home.php`
-- **Undersida** - Välj "Undersida" som sidmall
-- **Undersida 2** - Välj "Undersida 2" som sidmall
-- **Undersida 3** - Välj "Undersida 3" som sidmall
-- **Undersida 4** - Välj "Undersida 4" som sidmall
-- **Kontakt** - Välj "Kontakt" som sidmall
+
+-   **Startsida** - Välj "Startsida" som sidmall (eller använd `front-page.php`)
+-   **Blogg** - Använd standardmall eller `home.php`
+-   **Undersida** - Välj "Undersida" som sidmall
+-   **Undersida 2** - Välj "Undersida 2" som sidmall
+-   **Undersida 3** - Välj "Undersida 3" som sidmall
+-   **Undersida 4** - Välj "Undersida 4" som sidmall
+-   **Kontakt** - Välj "Kontakt" som sidmall
 
 ### 3. Konfigurera Startsida
 
@@ -75,16 +87,17 @@ Skapa följande sidor:
 ### 4. Skapa Användare
 
 Skapa minst 3 användare med olika behörigheter:
-- **Administrator** - Full behörighet
-- **Editor** - Kan redigera alla inlägg och sidor
-- **Author** - Kan skapa och redigera egna inlägg
+
+-   **Administrator** - Full behörighet
+-   **Editor** - Kan redigera alla inlägg och sidor
+-   **Author** - Kan skapa och redigera egna inlägg
 
 ### 5. Lägg till Innehåll
 
-- Skapa blogginlägg i olika kategorier
-- Tilldela olika författare till inläggen
-- Lägg till utvalda bilder till inlägg och sidor
-- Fyll på sidor med innehåll
+-   Skapa blogginlägg i olika kategorier
+-   Tilldela olika författare till inläggen
+-   Lägg till utvalda bilder till inlägg och sidor
+-   Fyll på sidor med innehåll
 
 ### 6. Konfigurera Widgets
 
@@ -95,10 +108,11 @@ Skapa minst 3 användare med olika behörigheter:
 ### 7. Installera Plugins
 
 Installera minst 3 plugins, till exempel:
-- **Contact Form 7** - För kontaktformulär (rekommenderas)
-- **Yoast SEO** - För SEO-optimering
-- **WP Super Cache** - För prestanda
-- Eller andra plugins efter behov
+
+-   **Contact Form 7** - För kontaktformulär (rekommenderas)
+-   **Yoast SEO** - För SEO-optimering
+-   **WP Super Cache** - För prestanda
+-   Eller andra plugins efter behov
 
 ## Filer och Struktur
 
@@ -142,9 +156,9 @@ Kontaktinformation i sidfoten kan anpassas via WordPress Customizer eller genom 
 
 ## Krav
 
-- WordPress 5.0 eller senare
-- PHP 7.0 eller senare
-- MySQL 5.6 eller senare
+-   WordPress 5.0 eller senare
+-   PHP 7.0 eller senare
+-   MySQL 5.6 eller senare
 
 ## Support
 

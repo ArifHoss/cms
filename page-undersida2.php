@@ -12,7 +12,8 @@ get_header();
 	<section>
 		<div class="container">
 			<div class="row">
-				<aside id="secondary" class="col-xs-12 col-md-3 col-md-pull-9">
+				<!-- Sidebar on the left (appears first in DOM, uses col-md-3) -->
+				<aside id="secondary" class="col-xs-12 col-md-3">
 					<ul class="side-menu">
 						<?php
 						// Get all pages with the same template or all subpages
@@ -32,7 +33,8 @@ get_header();
 					</ul>
 				</aside>
 
-				<div id="primary" class="col-xs-12 col-md-9 col-md-push-3">
+				<!-- Content on the right (appears second in DOM, uses col-md-9) -->
+				<div id="primary" class="col-xs-12 col-md-9">
 					<?php
 					while (have_posts()) :
 						the_post();

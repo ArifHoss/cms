@@ -14,6 +14,17 @@ get_header();
 			<div class="row">
 				<div class="col-xs-12 col-md-8 col-md-offset-2">
 					<?php
+					// Display contact form feedback messages
+					if (isset($_GET['contact'])) {
+						if ($_GET['contact'] === 'success') {
+							echo '<div class="alert alert-success">' . __('Tack för ditt meddelande! Vi återkommer så snart som möjligt.', 'cms-labb1') . '</div>';
+						} elseif ($_GET['contact'] === 'error') {
+							echo '<div class="alert alert-danger">' . __('Något gick fel. Vänligen försök igen.', 'cms-labb1') . '</div>';
+						}
+					}
+					?>
+
+					<?php
 					while (have_posts()) :
 						the_post();
 						?>
