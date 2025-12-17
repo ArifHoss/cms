@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install zip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# Enable mod_rewrite for pretty permalinks
+RUN a2enmod rewrite
+
 # Set working directory
 WORKDIR /var/www/html
 

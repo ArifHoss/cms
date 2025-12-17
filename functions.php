@@ -187,6 +187,36 @@ function cms_labb1_body_classes($classes) {
 add_filter('body_class', 'cms_labb1_body_classes');
 
 /**
+ * Fix nav menu classes - prevent multiple items from being marked as current
+ * This removes false "current" classes from menu items
+ */
+function cms_labb1_fix_nav_menu_classes($classes, $item) {
+    // If we're on a single post, category, tag, or archive,
+    // only mark the blog page as current (if it's the posts page)
+    if (is_singular('post') || is_category() || is_tag() || is_author() || is_date()) {
+        // Remove current classes from regular pages
+        if ($item->object == 'page') {
+            $posts_page_id = get_option('page_for_posts');
+
+            // If this menu item is NOT the posts page, remove current classes
+            if ($item->object_id != $posts_page_id) {
+                $classes = array_diff($classes, array(
+                    'current-menu-item',
+                    'current_page_item',
+                    'current-menu-parent',
+                    'current_page_parent',
+                    'current-menu-ancestor',
+                    'current_page_ancestor',
+                ));
+            }
+        }
+    }
+
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'cms_labb1_fix_nav_menu_classes', 10, 2);
+
+/**
  * Handle contact form submission
  */
 function cms_labb1_handle_contact_form() {
@@ -225,10 +255,27 @@ add_action('admin_post_nopriv_cms_labb1_contact_form', 'cms_labb1_handle_contact
  */
 function cms_labb1_fallback_menu() {
 	echo '<ul class="menu">';
-	echo '<li><a href="' . esc_url(home_url('/')) . '">Hem</a></li>';
 
-	// Get pages
-	$pages = get_pages(array('sort_column' => 'menu_order'));
+	// Home link - active on front page
+	$home_class = (is_front_page()) ? ' class="current-menu-item"' : '';
+	echo '<li' . $home_class . '><a href="' . esc_url(home_url('/')) . '">Hem</a></li>';
+
+	// Blog page link - active on blog/home page (posts page)
+	$posts_page_id = get_option('page_for_posts');
+	if ($posts_page_id) {
+		$blog_class = (is_home() || is_singular('post') || is_category() || is_tag() || is_author() || is_archive()) ? ' class="current-menu-item"' : '';
+		echo '<li' . $blog_class . '><a href="' . esc_url(get_permalink($posts_page_id)) . '">' . esc_html(get_the_title($posts_page_id)) . '</a></li>';
+	}
+
+	// Get pages (excluding front page and posts page)
+	$front_page_id = get_option('page_on_front');
+	$exclude_ids = array_filter(array($front_page_id, $posts_page_id));
+
+	$pages = get_pages(array(
+		'sort_column' => 'menu_order',
+		'exclude' => $exclude_ids,
+	));
+
 	foreach ($pages as $page) {
 		$current = (is_page($page->ID)) ? ' class="current-menu-item"' : '';
 		echo '<li' . $current . '><a href="' . esc_url(get_permalink($page->ID)) . '">' . esc_html($page->post_title) . '</a></li>';

@@ -1,6 +1,6 @@
 services:
   wordpress:
-    image: wordpress:latest
+    build: .
     container_name: cms_wordpress
     restart: unless-stopped
     ports:
