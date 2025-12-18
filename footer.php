@@ -1,4 +1,19 @@
-	<footer id="footer">
+<?php
+/**
+ * Footer Template - Sidfot
+ *
+ * Denna mall innehåller:
+ * - Footer widget-område ("Kort om oss")
+ * - Kontaktuppgifter (anpassningsbara via tema-inställningar)
+ * - Sociala medier-länkar
+ * - Copyright-text med dynamiskt årtal
+ * - wp_footer() för plugin-kompatibilitet
+ * 
+ * @package CMS_Labb1
+ * @since 1.0
+ */
+?>
+	<footer id="footer" role="contentinfo">
 		<div class="container">
 			<div class="row top">
 				<div class="col-xs-12 col-sm-6 col-md-4">

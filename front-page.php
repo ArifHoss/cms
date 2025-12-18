@@ -1,14 +1,22 @@
 <?php
 /**
- * Front Page Template
+ * Front Page Template - Startsida
  *
- * This template is used for the homepage when a static page is set as the front page.
+ * Denna mall används för startsidan när en statisk sida är inställd som förstasida
+ * i WordPress-inställningarna (Inställningar > Läsning).
+ * 
+ * Innehåller:
+ * - Hero-sektion med utvald bild (eller standardbild)
+ * - Dynamisk rubrik och välkomsttext från sidans innehåll
+ * 
+ * @package CMS_Labb1
+ * @since 1.0
  */
 
 get_header();
 ?>
 
-<main>
+<main id="main-content">
 	<section>
 		<div class="container">
 			<div class="row">

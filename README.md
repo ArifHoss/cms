@@ -1,169 +1,168 @@
-# CMS Labb 1 WordPress Theme
+# Resäventyr - WordPress Tema
 
-Ett anpassat WordPress-tema skapat från statisk HTML-struktur för CMS-utveckling kursen.
+Ett anpassat WordPress-tema för en rese- och äventyrsblogg, skapat för CMS-kursen.
 
-## Installation
+![Tema Screenshot](screenshot.png)
 
-1. Kopiera hela temamappen till `wp-content/themes/` i din WordPress-installation
-2. Kopiera även CSS, JS, bilder och fonter från den statiska webbplatsen:
-    - `css/` → `wp-content/themes/cms/css/`
-    - `js/` → `wp-content/themes/cms/js/`
-    - `img/` → `wp-content/themes/cms/img/`
-    - `fonts/` → `wp-content/themes/cms/fonts/`
-3. Aktivera temat i WordPress Admin → Utseende → Teman
+## 🎨 Temainformation
 
-## Funktioner
+- **Tema:** CMS Labb 1 - Resäventyr
+- **Version:** 1.0
+- **Författare:** Arif
+- **Text Domain:** cms-labb1
 
-### Sidmallar
+### Färgschema
+| Färg | Hex | Användning |
+|------|-----|------------|
+| Teal | `#1a6b6b` | Primärfärg (header, knappar) |
+| Guld | `#d4a853` | Accentfärg (hover, sidebar-topp) |
+| Mörk | `#2c3e50` | Sidebar, footer |
+| Ljus | `#f4f1ed` | Bakgrund |
 
-Temat inkluderar följande sidmallar som kan väljas när du skapar en ny sida:
+### Typsnitt
+- **Rubriker:** Playfair Display (Google Fonts)
+- **Brödtext:** Source Sans 3 (Google Fonts)
 
-1. **Undersida** - Textspalt med sidomeny till höger
-2. **Undersida 2** - Textspalt med sidomeny till vänster
-3. **Undersida 3** - Textspalt över hela sidans innehållsbredd
-4. **Undersida 4** - Textspalt till vänster och utvald bild till höger
-5. **Kontakt** - Kontaktsida med kontaktformulär
+---
 
-### Template Filer
+## 🚀 Installation
 
--   `front-page.php` - Startsida med hero-bild och välkomsttext
--   `home.php` - Blogg/nyhetssida som listar alla inlägg
--   `single.php` - Enskild bloggpost/nyhetsinlägg
--   `archive.php` - Arkiv-sida som listar alla inlägg för en vald datumperiod
--   `category.php` - Kategorisida som listar alla inlägg inom vald kategori
--   `author.php` - Författarsida som listar alla inlägg av en specifik författare
--   `search.php` - Sida som visar sökresultatet efter en sökning
--   `404.php` - 404-sida som visas om användaren hamnar fel
+### Förutsättningar
+- Docker och Docker Compose installerat
+- Eller en lokal WordPress-installation
 
-### Widget-områden
+### Steg 1: Starta WordPress med Docker
 
-Temat har två widget-områden:
+cd /path/to/cms
+docker-compose up -dGå till `http://localhost:8080/wp-admin`
 
--   **Sidebar** - Huvudsidobar (visas på bloggsidor)
--   **Footer Widget Area** - Widget-område för sidfot
+### Steg 2: Aktivera temat
 
-### Anpassad Widget
+1. Gå till **Utseende** → **Teman**
+2. Hitta "CMS Labb 1 - Resäventyr"
+3. Klicka **Aktivera**
 
-Temat inkluderar en anpassad widget: **Senaste inlägg med bild** som visar de senaste inläggen med utvald bild.
+---
 
-## Setup-instruktioner
+## 🔌 Rekommenderade plugins (minst 3 st)
 
-### 0. Skapa Theme Screenshot (VIKTIGT!)
+### 1. Contact Form 7
+Kontaktformulär med e-poststöd.
+1. **Tillägg** → **Lägg till nytt** → Sök "Contact Form 7"
+2. Installera och aktivera
+3. Gå till **Kontakt** → **Kontaktformulär**
 
-WordPress kräver en `screenshot.png` fil för att visa temat i admin-gränssnittet.
+### 2. WP Mail SMTP
+Säkerställer att e-post skickas korrekt.
+1. Sök "WP Mail SMTP"
+2. Installera och aktivera
+3. Följ setup-guiden (välj "PHP" för lokal utveckling)
 
-1. Ta en skärmdump av din webbplats
-2. Anpassa storleken till **880x660 pixlar** (rekommenderad storlek)
-3. Spara som `screenshot.png` i tema-mappen (`cms/screenshot.png`)
+### 3. Yoast SEO
+Sökmotoroptimering.
+1. Sök "Yoast SEO"
+2. Installera och aktivera
+3. Följ konfigurationsguiden
 
-**Tips:** Du kan använda verktyg som GIMP, Photoshop, eller online-verktyg för att skapa bilden.
+### Valfritt: Wordfence Security
+Säkerhetsplugin för WordPress.
 
-### 1. Skapa Meny
+---
 
-1. Gå till **Utseende → Menyer**
-2. Skapa en ny meny och lägg till önskade sidor/länkar
-3. Välj menyplatsen "Huvudmeny"
-4. Spara menyn
+## 👥 Skapa användare (minst 3 st)
 
-### 2. Skapa Sidor
+Gå till **Användare** → **Lägg till ny användare**
 
-Skapa följande sidor:
+| Användarnamn | E-post | Förnamn | Efternamn | Roll |
+|--------------|--------|---------|-----------|------|
+| `redaktor` | redaktor@example.com | Erik | Lindberg | Redaktör |
+| `forfattare` | forfattare@example.com | Anna | Svensson | Författare |
+| *(din admin)* | - | - | - | Administratör |
 
--   **Startsida** - Välj "Startsida" som sidmall (eller använd `front-page.php`)
--   **Blogg** - Använd standardmall eller `home.php`
--   **Undersida** - Välj "Undersida" som sidmall
--   **Undersida 2** - Välj "Undersida 2" som sidmall
--   **Undersida 3** - Välj "Undersida 3" som sidmall
--   **Undersida 4** - Välj "Undersida 4" som sidmall
--   **Kontakt** - Välj "Kontakt" som sidmall
+---
 
-### 3. Konfigurera Startsida
+## 📁 Skapa kategorier
 
-1. Gå till **Inställningar → Läsning**
-2. Välj "En statisk sida" som startsida
-3. Välj din startsida under "Startsida"
-4. Välj din bloggsida under "Inläggssida"
+Gå till **Inlägg** → **Kategorier**
 
-### 4. Skapa Användare
+| Namn | Slug | Beskrivning |
+|------|------|-------------|
+| Europa | `europa` | Resmål och äventyr i Europa |
+| Asien | `asien` | Upptäck Asiens underbara platser |
+| Amerika | `amerika` | Nordamerika och Sydamerika |
+| Äventyr | `aventyr` | Äventyrsresor och aktiviteter |
+| Tips & Guider | `tips-guider` | Praktiska resetips och guider |
 
-Skapa minst 3 användare med olika behörigheter:
+---
 
--   **Administrator** - Full behörighet
--   **Editor** - Kan redigera alla inlägg och sidor
--   **Author** - Kan skapa och redigera egna inlägg
+## 📄 Skapa sidor
 
-### 5. Lägg till Innehåll
+### Startsida
+- **Titel:** "Välkommen till Resäventyr"
+- **Innehåll:** Välkomsttext
+- **Utvald bild:** Hero-bild
+- **Mall:** Standard
 
--   Skapa blogginlägg i olika kategorier
--   Tilldela olika författare till inläggen
--   Lägg till utvalda bilder till inlägg och sidor
--   Fyll på sidor med innehåll
+### Bloggsida
+- **Titel:** "Blogg"
+- **Innehåll:** Lämna tomt
+- **Mall:** Standard
 
-### 6. Konfigurera Widgets
+### Undersidor (4 olika mallar)
 
-1. Gå till **Utseende → Widgets**
-2. Lägg till widgets i "Sidebar" och "Footer Widget Area"
-3. Testa den anpassade widgeten "Senaste inlägg med bild"
+| Sida | Mall | Layout |
+|------|------|--------|
+| Om oss | Undersida | Text + höger-sidebar |
+| Våra resenärer | Undersida 2 | Vänster-sidebar + text |
+| Integritetspolicy | Undersida 3 | Fullbredd |
+| Samarbeta med oss | Undersida 4 | Text + bild till höger |
 
-### 7. Installera Plugins
+### Kontaktsida
+- **Titel:** "Kontakt"
+- **Mall:** Kontakt
+- Visar kontaktformulär automatiskt
 
-Installera minst 3 plugins, till exempel:
+---
 
--   **Contact Form 7** - För kontaktformulär (rekommenderas)
--   **Yoast SEO** - För SEO-optimering
--   **WP Super Cache** - För prestanda
--   Eller andra plugins efter behov
+## ✍️ Skapa blogginlägg (minst 3-5 st)
 
-## Filer och Struktur
+Skapa inlägg med olika författare för att demonstrera funktionaliteten:
 
-```
-cms/
-├── style.css              # Tema-header och importer
-├── functions.php          # Tema-funktioner och setup
-├── header.php             # Header-template
-├── footer.php             # Footer-template
-├── sidebar.php            # Sidebar-template
-├── index.php              # Huvudtemplate (fallback)
-├── front-page.php         # Startsida
-├── home.php               # Blogglista
-├── single.php             # Enskild post
-├── archive.php            # Arkiv
-├── category.php           # Kategori
-├── author.php             # Författare
-├── search.php             # Sökresultat
-├── 404.php                # 404-sida
-├── page.php               # Standardsidmall
-├── page-undersida.php     # Sidmall: Undersida
-├── page-undersida2.php    # Sidmall: Undersida 2
-├── page-undersida3.php   # Sidmall: Undersida 3
-├── page-undersida4.php    # Sidmall: Undersida 4
-├── page-kontakt.php       # Sidmall: Kontakt
-├── css/                   # CSS-filer (kopiera från statisk webbplats)
-├── js/                    # JavaScript-filer (kopiera från statisk webbplats)
-├── img/                   # Bilder (kopiera från statisk webbplats)
-└── fonts/                 # Fonter (kopiera från statisk webbplats)
-```
+| Titel | Författare | Kategorier |
+|-------|------------|------------|
+| De bästa dolda pärlorna i Europa 2024 | Admin | Europa, Äventyr |
+| Komplett guide: Backpacking i Sydostasien | Redaktör | Asien, Tips & Guider |
+| Min resa genom Japans landsbygd | Författare | Asien, Äventyr |
+| 10 saker att packa för en weekendresa | Admin | Tips & Guider |
+| Roadtrip genom Island | Redaktör | Europa, Äventyr |
 
-## Anpassningar
+---
 
-### Färger och Design
+## ⚙️ Konfiguration
 
-Du kan anpassa färger, typsnitt och design genom att redigera CSS-filerna i `css/`-mappen eller lägga till anpassad CSS i **Utseende → Anpassa → Ytterligare CSS**.
+### Läsningsinställningar
+1. **Inställningar** → **Läsning**
+2. Välj "En statisk sida"
+3. **Hemsida:** "Välkommen till Resäventyr"
+4. **Inläggssida:** "Blogg"
 
-### Kontaktinformation
+### Huvudmeny
+1. **Utseende** → **Menyer**
+2. Skapa ny meny: "Huvudmeny"
+3. Lägg till sidor: Hem, Blogg, Om oss, Våra resenärer, Samarbeta, Kontakt
+4. Tilldela till "Huvudmeny"
 
-Kontaktinformation i sidfoten kan anpassas via WordPress Customizer eller genom att redigera `footer.php`.
+### Widgets
 
-## Krav
+**Sidebar:**
+- Sök
+- Senaste inlägg med bild (egen widget)
+- Kategorier
+- Arkiv
 
--   WordPress 5.0 eller senare
--   PHP 7.0 eller senare
--   MySQL 5.6 eller senare
+**Footer Widget Area:**
+- Text-widget med beskrivning av webbplatsen
 
-## Support
+---
 
-För frågor eller problem, kontakta kursansvarig eller konsultera WordPress Codex.
-
-## Licens
-
-Detta tema är skapat för utbildningssyfte inom ramen för CMS-utveckling kursen.
+## 📁 Filstruktur

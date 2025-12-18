@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS Labb 1 - Theme Screenshot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background-color: #f4f1ed;
+            width: 1200px;
+            height: 900px;
+            overflow: hidden;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a6b6b 0%, #0d4f4f 100%);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .logo span {
+            color: #d4a853;
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .search-box input {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 3px;
+            width: 200px;
+        }
+        
+        .search-box button {
+            background: #d4a853;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #2c3e50;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        
+        nav ul li.active {
+            background: rgba(0,0,0,0.2);
+            padding: 10px 20px;
+            margin: -10px 0;
+        }
+        
+        /* Hero */
+        .hero {
+            position: relative;
+            height: 320px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), 
+                        url('img/city.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        }
+        
+        /* Content area */
+        .content {
+            display: flex;
+            padding: 30px 40px;
+            gap: 30px;
+        }
+        
+        .main-content {
+            flex: 1;
+        }
+        
+        /* Article cards */
+        .article-card {
+            background: white;
+            border-top: 3px solid #1a6b6b;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .article-card h2 {
+            font-family: 'Playfair Display', serif;
+            color: #2c3e50;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .article-card .meta {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .article-card .meta span {
+            color: #d4a853;
+        }
+        
+        .article-card p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: #2c3e50;
+            border-top: 3px solid #d4a853;
+            color: white;
+            padding: 25px;
+        }
+        
+        .sidebar h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .sidebar ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+        
+        .sidebar ul li a {
+            color: #d4a853;
+            text-decoration: none;
+        }
+        
+        /* Footer preview */
+        footer {
+            background: #1a252f;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+        }
+        
+        footer .copyright {
+            color: #888;
+        }
+        
+        footer .social span {
+            color: #d4a853;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Resäventyr<span>.</span></div>
+        <div class="search-box">
+            <input type="text" placeholder="Sök efter...">
+            <button>Sök</button>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li class="active"><a href="#">Hem</a></li>
+            <li><a href="#">Blogg</a></li>
+            <li><a href="#">Europa</a></li>
+            <li><a href="#">Asien</a></li>
+            <li><a href="#">Tips & Guider</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </nav>
+    
+    <div class="hero">
+        <div>
+            <h1>Upptäck världen med oss</h1>
+            <p>Inspiration, tips och berättelser från resor runt hela jorden</p>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="main-content">
+            <div class="article-card">
+                <h2>De bästa dolda pärlorna i Europa 2024</h2>
+                <div class="meta">
+                    <span>📅</span> 15 december 2024 &nbsp;|&nbsp;
+                    <span>👤</span> Anna Svensson &nbsp;|&nbsp;
+                    <span>🏷️</span> Europa, Äventyr
+                </div>
+                <p>Utforska Europas mest underskattade resmål som fortfarande erbjuder autentiska upplevelser borta från turistmassorna. Från charmiga bergbyar i Slovenien till orörda kuster på Albaniens riviera...</p>
+            </div>
+            
+            <div class="article-card">
+                <h2>Komplett guide: Backpacking i Sydostasien</h2>
+                <div class="meta">
+                    <span>📅</span> 10 december 2024 &nbsp;|&nbsp;
+                    <span>👤</span> Erik Lindberg &nbsp;|&nbsp;
+                    <span>🏷️</span> Asien, Tips
+                </div>
+                <p>Allt du behöver veta för att planera din drömresa genom Thailand, Vietnam, Kambodja och Laos. Budget, rutt, boende och måste-se platser...</p>
+            </div>
+        </div>
+        
+        <div class="sidebar">
+            <h3>Sök</h3>
+            
+            <h3>Kategorier</h3>
+            <ul>
+                <li><a href="#">Europa</a></li>
+                <li><a href="#">Asien</a></li>
+                <li><a href="#">Amerika</a></li>
+                <li><a href="#">Äventyr</a></li>
+                <li><a href="#">Tips & Guider</a></li>
+            </ul>
+            
+            <h3>Arkiv</h3>
+            <ul>
+                <li><a href="#">December 2024</a></li>
+                <li><a href="#">November 2024</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="copyright">© Resäventyr 2024</div>
+        <div class="social">
+            <span>Facebook</span>
+            <span>Instagram</span>
+            <span>Twitter</span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,14 +1,20 @@
 <?php
 /**
  * Template Name: Undersida 4
+ * 
+ * Sidmall: Textspalt till vänster och utvald bild till höger
  *
- * Page template: Text column on left, featured image on right
+ * Layout: 6 kolumner text | 6 kolumner bild
+ * Visar utvald bild om sådan finns, annars standardbild.
+ * 
+ * @package CMS_Labb1
+ * @since 1.0
  */
 
 get_header();
 ?>
 
-<main>
+<main id="main-content">
 	<section>
 		<div class="container">
 			<div class="row">

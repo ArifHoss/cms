@@ -1,14 +1,20 @@
 <?php
 /**
  * Template Name: Undersida 3
+ * 
+ * Sidmall: Textspalt över hela sidans bredd
  *
- * Page template: Full-width text column
+ * Layout: 12 kolumner innehåll (fullbredd)
+ * Ingen sidomeny - lämplig för innehållsrika sidor.
+ * 
+ * @package CMS_Labb1
+ * @since 1.0
  */
 
 get_header();
 ?>
 
-<main>
+<main id="main-content">
 	<section>
 		<div class="container">
 			<div class="row">

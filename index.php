@@ -8,7 +8,7 @@
 get_header();
 ?>
 
-<main>
+<main id="main-content">
 	<section>
 		<div class="container">
 			<div class="row">

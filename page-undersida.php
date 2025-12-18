@@ -1,14 +1,20 @@
 <?php
 /**
  * Template Name: Undersida
+ * 
+ * Sidmall: Textspalt med sidomeny till höger
  *
- * Page template: Text column with sidebar menu on the right
+ * Layout: 9 kolumner innehåll | 3 kolumner sidomeny
+ * Sidomenyn visar länkar till alla sidor med undersida-mallar.
+ * 
+ * @package CMS_Labb1
+ * @since 1.0
  */
 
 get_header();
 ?>
 
-<main>
+<main id="main-content">
 	<section>
 		<div class="container">
 			<div class="row">

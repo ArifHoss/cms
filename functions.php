@@ -1,13 +1,33 @@
 <?php
 /**
- * Theme Functions
+ * Theme Functions - CMS Labb 1 Resäventyr
  *
- * All theme functionality and setup
+ * Denna fil innehåller all temafunktionalitet och setup:
+ * 
+ * 1. Tema-setup (add_theme_support, register_nav_menus)
+ * 2. Skript och stilar (wp_enqueue_scripts)
+ * 3. Widget-områden (register_sidebar)
+ * 4. Egen widget för senaste inlägg med bilder
+ * 5. Kontaktformulär-hantering
+ * 6. Hjälpfunktioner för menyer
+ * 
+ * @package CMS_Labb1
+ * @since 1.0
  */
 
 // Prevent direct access
 if (!defined('ABSPATH')) {
     exit;
+}
+
+/**
+ * Backward compatibility for wp_body_open()
+ * Added in WordPress 5.2
+ */
+if (!function_exists('wp_body_open')) {
+    function wp_body_open() {
+        do_action('wp_body_open');
+    }
 }
 
 /**
@@ -43,10 +63,18 @@ add_action('after_setup_theme', 'cms_labb1_setup');
  * Enqueue scripts and styles
  */
 function cms_labb1_scripts() {
+    // Google Fonts - Playfair Display for headings, Source Sans 3 for body
+    wp_enqueue_style(
+        'google-fonts',
+        'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap',
+        array(),
+        null
+    );
+
     // Styles
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '1.0');
     wp_enqueue_style('font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), '1.0');
-    wp_enqueue_style('theme-style', get_template_directory_uri() . '/css/style.css', array('bootstrap', 'font-awesome'), '1.0');
+    wp_enqueue_style('theme-style', get_template_directory_uri() . '/css/style.css', array('bootstrap', 'font-awesome', 'google-fonts'), '1.0');
     wp_enqueue_style('style', get_stylesheet_uri(), array('theme-style'), '1.0');
 
     // Scripts

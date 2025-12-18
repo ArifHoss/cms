@@ -1,14 +1,25 @@
 <?php
 /**
  * Template Name: Kontakt
+ * 
+ * Kontaktsidmall med kontaktformulär
  *
- * Contact page template with contact form
+ * Denna mall innehåller:
+ * - Dynamiskt sidinnehåll
+ * - Kontaktformulär (stöd för Contact Form 7 plugin)
+ * - Fallback till eget formulär om CF7 inte är installerat
+ * - E-postmeddelanden skickas via wp_mail()
+ * 
+ * Formulärhantering finns i functions.php: cms_labb1_handle_contact_form()
+ * 
+ * @package CMS_Labb1
+ * @since 1.0
  */
 
 get_header();
 ?>
 
-<main>
+<main id="main-content">
 	<section>
 		<div class="container">
 			<div class="row">

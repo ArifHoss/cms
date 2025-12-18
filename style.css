@@ -1,12 +1,53 @@
 /*
-Theme Name: CMS Labb 1
-Description: Ett anpassat WordPress-tema skapat från statisk HTML-struktur för CMS-utveckling kursen. Temaet inkluderar alla nödvändiga sidmallar, widget-områden och dynamisk innehållshantering.
+Theme Name: CMS Labb 1 - Resäventyr
+Theme URI: https://example.com/resaventyr
+Description: Ett anpassat WordPress-tema för en rese- och äventyrsblogg. Temat inkluderar alla nödvändiga sidmallar (Undersida 1-4, Kontakt), widget-områden (sidebar och footer), en egen widget för senaste inlägg med bilder, och dynamisk innehållshantering. Designat med tillgänglighet i fokus (WCAG-riktlinjer) och responsiv layout med Bootstrap.
 Author: Arif
+Author URI: https://example.com
 Version: 1.0
 Text Domain: cms-labb1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, news, travel, responsive-layout, custom-menu, featured-images, translation-ready, accessibility-ready
+
+Färgschema:
+- Primär: Teal #1a6b6b
+- Accent: Guld #d4a853
+- Mörk: #2c3e50
+- Ljus bakgrund: #f4f1ed
+
+Typsnitt:
+- Rubriker: Playfair Display (Google Fonts)
+- Brödtext: Source Sans 3 (Google Fonts)
 */
 
 /*
- * Styles are enqueued via functions.php
+ * All theme styles are located in /css/style.css
  * This file only contains the theme header information required by WordPress
+ * 
+ * Temastruktur:
+ * - style.css: Tema-metadata (denna fil)
+ * - css/style.css: Huvudsakliga stilar
+ * - css/bootstrap.css: Bootstrap ramverk
+ * - css/font-awesome.css: Ikoner
+ * - functions.php: Temafunktioner och setup
+ * - header.php: Sidhuvud
+ * - footer.php: Sidfot
+ * - sidebar.php: Sidofält med widgets
+ * - index.php: Huvudmall/fallback
+ * - front-page.php: Startsida
+ * - home.php: Bloggsida
+ * - single.php: Enskilt inlägg
+ * - page.php: Standardsida
+ * - page-undersida.php: Sidmall med höger-sidebar
+ * - page-undersida2.php: Sidmall med vänster-sidebar
+ * - page-undersida3.php: Sidmall fullbredd
+ * - page-undersida4.php: Sidmall med bild till höger
+ * - page-kontakt.php: Kontaktsida med formulär
+ * - archive.php: Arkivsida (datum)
+ * - category.php: Kategorisida
+ * - author.php: Författarsida
+ * - search.php: Sökresultat
+ * - 404.php: Felsida
+ * - searchform.php: Sökformulär
  */

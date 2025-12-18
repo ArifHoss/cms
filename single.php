@@ -1,14 +1,23 @@
 <?php
 /**
- * Single Post Template
+ * Single Post Template - Enskilt blogginlägg
  *
- * This template displays a single blog post.
+ * Denna mall visar ett enskilt blogginlägg med:
+ * - Utvald bild (om sådan finns)
+ * - Rubrik
+ * - Metadata: datum, författare, kategorier
+ * - Fullständigt innehåll
+ * - Navigation till föregående/nästa inlägg
+ * - Sidofält med widgets
+ * 
+ * @package CMS_Labb1
+ * @since 1.0
  */
 
 get_header();
 ?>
 
-<main>
+<main id="main-content">
 	<section>
 		<div class="container">
 			<div class="row">

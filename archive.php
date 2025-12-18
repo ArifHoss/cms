@@ -1,14 +1,22 @@
 <?php
 /**
- * Archive Template
+ * Archive Template - Arkivsida
  *
- * This template displays archive pages (date-based archives).
+ * Denna mall visar datumbaserade arkivsidor:
+ * - Dag: "Arkiv: 17 december 2024"
+ * - Månad: "Arkiv: december 2024"
+ * - År: "Arkiv: 2024"
+ * 
+ * Inkluderar paginering och sidofält.
+ * 
+ * @package CMS_Labb1
+ * @since 1.0
  */
 
 get_header();
 ?>
 
-<main>
+<main id="main-content">
 	<section>
 		<div class="container">
 			<div class="row">

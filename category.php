@@ -1,14 +1,23 @@
 <?php
 /**
- * Category Template
+ * Category Template - Kategorisida
  *
- * This template displays category archive pages.
+ * Denna mall visar alla inlägg inom en vald kategori.
+ * 
+ * Inkluderar:
+ * - Kategorinamn som rubrik
+ * - Inläggslista med metadata
+ * - Paginering
+ * - Sidofält med widgets
+ * 
+ * @package CMS_Labb1
+ * @since 1.0
  */
 
 get_header();
 ?>
 
-<main>
+<main id="main-content">
 	<section>
 		<div class="container">
 			<div class="row">

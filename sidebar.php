@@ -1,10 +1,12 @@
 <?php
 /**
  * Sidebar Template
+ * 
+ * Displays the sidebar widget area with search, pages, archive, and categories.
  */
 ?>
 
-<aside id="secondary" class="col-xs-12 col-md-3">
+<aside id="secondary" class="col-xs-12 col-md-3" role="complementary" aria-label="<?php _e('Sidofält', 'cms-labb1'); ?>">
 	<div id="sidebar">
 		<?php
 		if (is_active_sidebar('sidebar-1')) {

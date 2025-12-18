@@ -1,14 +1,25 @@
 <?php
 /**
- * Blog Posts Template
+ * Blog Posts Template - Blogg/Nyhetssida
  *
- * This template displays the blog posts listing page.
+ * Denna mall visar blogginlägg i listformat med:
+ * - Utvalda bilder (thumbnails)
+ * - Rubrik med länk till inlägget
+ * - Metadata (datum, författare, kategorier)
+ * - Utdrag
+ * - Paginering
+ * - Sidofält med widgets
+ * 
+ * Används när en sida är inställd som "Inläggssida" i WordPress.
+ * 
+ * @package CMS_Labb1
+ * @since 1.0
  */
 
 get_header();
 ?>
 
-<main>
+<main id="main-content">
 	<section>
 		<div class="container">
 			<div class="row">

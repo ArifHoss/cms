@@ -1,14 +1,23 @@
 <?php
 /**
- * Search Results Template
+ * Search Results Template - Sökresultat
  *
- * This template displays search results.
+ * Denna mall visar sökresultat efter en sökning.
+ * 
+ * Inkluderar:
+ * - Sökordet i rubriken
+ * - Nytt sökformulär
+ * - Matchande inlägg/sidor
+ * - Paginering vid många resultat
+ * 
+ * @package CMS_Labb1
+ * @since 1.0
  */
 
 get_header();
 ?>
 
-<main>
+<main id="main-content">
 	<section>
 		<div class="container">
 			<div class="row">

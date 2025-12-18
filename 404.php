@@ -1,14 +1,23 @@
 <?php
 /**
- * 404 Error Template
+ * 404 Error Template - Felsida
  *
- * This template displays when a page is not found.
+ * Denna mall visas när en sida inte hittas (HTTP 404).
+ * 
+ * Innehåller:
+ * - Felmeddelande på svenska
+ * - Länk tillbaka till startsidan
+ * - Sökformulär
+ * - Lista med populära sidor
+ * 
+ * @package CMS_Labb1
+ * @since 1.0
  */
 
 get_header();
 ?>
 
-<main>
+<main id="main-content">
 	<section>
 		<div class="container">
 			<div class="row">
